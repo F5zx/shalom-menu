@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,17 +13,17 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     padding: 15px;
-    max-width: 600px; 
+    max-width: 600px;
     margin: 0 auto;
 }
 
 header {
     text-align: center;
-    padding: 30px 0 20px 0;
+    padding: 25px 0 15px 0;
 }
 
 header h1 {
-    color: #ffb74d; 
+    color: #ffb74d;
     font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -32,12 +36,40 @@ header p {
     font-style: italic;
 }
 
+.fast-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+    border-bottom: 1px solid #222222;
+    margin-bottom: 10px;
+}
+
+.nav-btn {
+    color: #e0e0e0;
+    text-decoration: none;
+    background-color: #1e1e1e;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #333;
+    transition: background-color 0.2s;
+}
+
+.nav-btn:active {
+    background-color: #ffb74d;
+    color: #121212;
+}
+
 .category-title {
     color: #ffb74d;
     font-size: 1.4rem;
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
-    margin: 30px 0 15px 0;
+    margin: 35px 0 15px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -47,7 +79,6 @@ header p {
     flex-direction: column;
     gap: 20px;
 }
-
 
 .menu-item {
     background-color: #1e1e1e;
@@ -70,6 +101,7 @@ header p {
     overflow: hidden;
 }
 
+/* Сама картинка */
 .item-img {
     display: none;
     width: 100%;
@@ -115,11 +147,12 @@ header p {
     line-height: 1.4;
 }
 
+/* Футер */
 footer {
     text-align: center;
     padding: 40px 0 20px 0;
     color: #555;
     font-size: 0.8rem;
-    border-top: 1px solid 22px;
+    border-top: 1px solid #222222;
     margin-top: 40px;
 }
